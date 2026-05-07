@@ -16,6 +16,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 20);
+        onScroll();
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
@@ -75,7 +76,7 @@ export default function Navbar() {
                     <button onClick={() => setLanguage("ES")} className={`relative text-lg uppercase transition-colors duration-300 ${language === "ES" ? "text-gold" : "text-foreground"}`}
                     >ES</button>
 
-                    <span className="text-cream/30 text-2xl">/</span>
+                    <span className="text-foreground text-base">/</span>
 
                     <button onClick={() => setLanguage("EN")} className={`relative text-lg uppercase transition-colors duration-300 ${language === "EN" ? "text-gold" : "text-foreground"}`}
                     >EN</button>

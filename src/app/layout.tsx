@@ -32,12 +32,12 @@ export default function RootLayout({
       lang="es"
       className={`${greatVibes.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <LanguageProvider>
-        <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>
           <Navbar />
           {children}
-        </body>
-      </LanguageProvider>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
