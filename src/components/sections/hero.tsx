@@ -24,15 +24,8 @@ export default function Hero() {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.25 }}>
-                    {t.title}
+                    <img src="/images/logo.png" alt="Logo" className="h-35 md:h-50 w-auto" />
                 </motion.h1>
-
-                <motion.p className="text-4xl md:text-6xl uppercase text-foreground font-light tracking-wider mb-10"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}>
-                    {t.subtitle}
-                </motion.p>
 
                 <div className="h-1 w-24 md:w-32 bg-gold mb-10" />
 
