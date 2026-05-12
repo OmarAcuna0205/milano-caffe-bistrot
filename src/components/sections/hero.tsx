@@ -20,11 +20,11 @@ export default function Hero() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
 
-                <motion.h1 className="text-7xl md:text-9xl uppercase text-foreground font-bold tracking-wider mb-10"
+                <motion.h1 className="mb-10"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.25 }}>
-                    <img src="/images/logo.png" alt="Logo" className="h-35 md:h-50 mr-7.5 w-auto" />
+                    <img src="/images/logo.png" alt="Logo" className="h-35 md:h-50 mr-85 md:mr-7.5" />
                 </motion.h1>
 
                 <div className="h-1 w-24 md:w-32 bg-gold mb-10" />
