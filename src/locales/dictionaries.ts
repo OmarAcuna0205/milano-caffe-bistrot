@@ -12,6 +12,10 @@ export const dictionaries = {
       { label: "Sobre Nosotros", href: "#sobre-nosotros" },
       { label: "Contacto", href: "#contacto" },
     ],
+    menu: {
+      title: "Nuestro Menú",
+      subtitle: "Descubre nuestra selección",
+    },
   },
   EN: {
     hero: {
@@ -26,5 +30,9 @@ export const dictionaries = {
       { label: "About Us", href: "#sobre-nosotros" },
       { label: "Contact", href: "#contacto" },
     ],
+    menu: {
+      title: "Our Menu",
+      subtitle: "Discover our selection",
+    },
   },
 };
