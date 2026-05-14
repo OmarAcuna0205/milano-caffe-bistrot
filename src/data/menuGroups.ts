@@ -9,12 +9,12 @@ export const menuGroupsES: MenuGroup[] = [
     id: "cocina",
     label: "Cocina",
     categoryNames: [
-      "Menu ejecutivo",
       "Colazione",
       "Antipasti",
       "Paste",
       "Insalate",
       "Panini & Pizza",
+      "Menu ejecutivo",
     ],
   },
   {
@@ -30,7 +30,7 @@ export const menuGroupsES: MenuGroup[] = [
   {
     id: "bar",
     label: "Bar",
-    categoryNames: ["Mixología", "Aperitivi", "Licores", "Birra", "Vinos"],
+    categoryNames: ["Mixología", "Aperitivi", "Vinos", "Licores", "Birra"],
   },
 ];
 
@@ -39,12 +39,12 @@ export const menuGroupsEN: MenuGroup[] = [
     id: "cuisine",
     label: "Cuisine",
     categoryNames: [
-      "Executive Menu",
       "Colazione",
       "Antipasti",
       "Paste",
       "Insalate",
       "Panini & Pizza",
+      "Executive Menu",
     ],
   },
   {
@@ -60,6 +60,6 @@ export const menuGroupsEN: MenuGroup[] = [
   {
     id: "bar",
     label: "Bar",
-    categoryNames: ["Mixology", "Aperitivi", "Licores", "Birra", "Vinos"],
+    categoryNames: ["Mixology", "Aperitivi", "Vinos", "Licores", "Birra"],
   },
 ];

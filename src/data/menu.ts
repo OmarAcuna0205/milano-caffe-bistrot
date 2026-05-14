@@ -23,7 +23,7 @@ export const menuCategories: MenuCategory[] = [
 
   {
     name: "Menu ejecutivo",
-    description: "Lunes a viernes 9:00 a 15:00. Se sirven en porción personal.",
+    description: "Lunes a viernes 9:00 a 15:00 | Porción personal | 150$",
     items: [
       { 
         name: "A escoger",
@@ -239,7 +239,7 @@ export const menuCategories: MenuCategory[] = [
 
   {
     name: "Caffè",
-    note: "Leche de coco, avena y almendra +$25 · Sabor extra +$25 (Avellana, Fresa, Menta, Pistache, Chocolate, Caramelo, Vainilla, Amaretto, Crema Irlandesa)",
+    note: `Leche de coco, avena y almendra +$25 \nSabor extra +$25 (Avellana, Fresa, Menta, Pistache, Chocolate, Caramelo, Vainilla, Amaretto, Crema Irlandesa)`,
     items: [
       {
         name: "Espresso",
@@ -697,13 +697,13 @@ export const menuCategories: MenuCategory[] = [
         priceBottle: 450,
       },
       {
-        name: "Hardys Stamp Cabernet Shiraz",
+        name: "Hardys Stamp Shiraz",
         description: "Frutos negros terciopelados y acidez conjunta.",
         price: 170,
         priceBottle: 630,
       },
       {
-        name: "Bouchard Heritage Pinot Noir",
+        name: "Bouchard Heritage Noir",
         description: "Equilibrado, vigoroso con un hermoso marco.",
         price: 180,
         priceBottle: 750,
@@ -721,7 +721,7 @@ export const menuCategories: MenuCategory[] = [
         priceBottle: 560,
       },
       {
-        name: "Maison Nicolas Cabernet Sauvignon",
+        name: "Maison Nicolas Cabernet",
         description: "Frutos negros, notas tostadas, un toque herbal.",
         price: 180,
         priceBottle: 700,
@@ -733,13 +733,13 @@ export const menuCategories: MenuCategory[] = [
         priceBottle: 585,
       },
       {
-        name: "Hardys Stamp Chardonnay Semillon",
+        name: "Hardys Stamp Chardonnay",
         description: "Rico y redondeado, intensos sabores a cerezas jugosas.",
         price: 170,
         priceBottle: 630,
       },
       {
-        name: "Maison Nicolas Sauvignon Blanc",
+        name: "Maison Nicolas Blanc",
         description: "Fresco, Limpio y acidez viva.",
         price: 170,
         priceBottle: 620,

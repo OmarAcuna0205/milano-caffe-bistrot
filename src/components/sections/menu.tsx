@@ -42,7 +42,7 @@ export default function Menu() {
     };
 
     return (
-        <section id="menu" className="w-full min-h-screen bg-cream py-24 scroll-mt-17">
+        <section id="menu" className="w-full min-h-screen bg-cream py-20 scroll-mt-17">
 
             <div className="text-center mb-12 px-6">
 
@@ -50,7 +50,7 @@ export default function Menu() {
                     {t.title}
                 </h2>
 
-                <p className="uppercase text-wood text-xl md:text-2xl mb-6">
+                <p className="uppercase text-wood text-xl md:text-4xl mb-6">
                     {t.subtitle}
                 </p>
 
@@ -58,10 +58,10 @@ export default function Menu() {
 
             </div>
 
-            <div className="flex justify-center gap-2 px-2 md:px-4 mb-8 flex-wrap">
+            <div className="flex justify-center gap-2 md:gap-4 md:px-4 mb-8 flex-wrap">
 
                 {groups.map((group) => (
-                    <button key={group.id} onClick={() => handleGroupChange(group.id)} className={`px-4 md:px-6 py-2 text-sm uppercase transition-all duration-300 border 
+                    <button key={group.id} onClick={() => handleGroupChange(group.id)} className={`px-4 md:px-8 py-2 uppercase transition-all duration-300 border 
                         ${activeGroupId === group.id ? "bg-espresso text-cream border-espresso" : "bg-transparent text-espresso border-espresso"}`}>
                         {group.label}
                     </button>
@@ -83,10 +83,10 @@ export default function Menu() {
                                 if (!cat) return null;
                                 return (
 
-                                    <button key={cat.name} onClick={() => setActiveCategoryName(cat.name)} className={`relative px-4 py-2 text-sm uppercase transition-colors duration-300
+                                    <button key={cat.name} onClick={() => setActiveCategoryName(cat.name)} className={`relative px-4 py-2 uppercase transition-colors duration-300
                                         ${activeCategoryName === cat.name
-                                            ? "text-espresso"
-                                            : "text-espresso/75 hover:text-espresso"}`}>
+                                            ? "text-wood"
+                                            : "text-wood/75 hover:text-wood"}`}>
                                         {cat.name}
 
                                         {activeCategoryName === cat.name && (
@@ -112,12 +112,12 @@ export default function Menu() {
                             transition={{ duration: 0.3, ease: "easeInOut" }}>
 
                             {currentCategory?.description && (
-                                <p className="text-center text-wood/60 italic text-sm mb-8 max-w-xl mx-auto">
+                                <p className="text-center text-wood italic font-extrabold mb-8 max-w-xl mx-auto">
                                     {currentCategory.description}
                                 </p>
                             )}
                             {currentCategory?.note && (
-                                <p className="text-center text-gold uppercase tracking-widest text-xs mb-10">
+                                <p className="text-center text-gold italic text-lg font-extrabold mb-8 max-w-xl mx-auto whitespace-pre-line">
                                     {currentCategory.note}
                                 </p>
                             )}
@@ -132,13 +132,13 @@ export default function Menu() {
 
                                         <div className="flex justify-between items-baseline gap-3">
 
-                                            <h4 className="uppercase text-espresso tracking-wider text-sm font-semibold shrink-0">
+                                            <h4 className="uppercase text-espresso tracking-wide font-bold shrink-0">
                                                 {item.name}
                                             </h4>
 
-                                            <div className="grow border-b border-dotted border-espresso/15 relative -top-1" />
+                                            <div className="grow border-b border-dotted border-espresso/30 relative -top-1" />
 
-                                            <div className="text-gold text-sm whitespace-nowrap shrink-0 font-semibold">
+                                            <div className="text-gold whitespace-nowrap shrink-0 font-semibold">
                                                 {item.priceBottle ? (
                                                     <span>
                                                         {item.price != null && `${formatPrice(item.price)} / `}
@@ -154,13 +154,13 @@ export default function Menu() {
                                         </div>
 
                                         {item.description && (
-                                            <p className="text-wood text-xs mt-1.5 leading-relaxed">
+                                            <p className="text-wood text-sm mt-1.5 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         )}
 
                                         {item.available && (
-                                            <span className="text-wood/40 text-xs italic mt-1">
+                                            <span className="text-wood text-sm italic mt-1">
                                                 {item.available}
                                             </span>
                                         )}
@@ -170,7 +170,7 @@ export default function Menu() {
                                             <div className="mt-2 space-y-0.5">
                                                 {item.extras.map((extra) => (
 
-                                                    <div key={extra.label} className="flex justify-between text-xs text-gold/60">
+                                                    <div key={extra.label} className="flex justify-between text-sm text-gold">
                                                         <span>+ {extra.label}</span>
                                                         <span>+${extra.price}</span>
                                                     </div>
