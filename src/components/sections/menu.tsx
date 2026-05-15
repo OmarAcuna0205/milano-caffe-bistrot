@@ -6,7 +6,7 @@ import { dictionaries } from "@/locales/dictionaries";
 import { menuCategories as menuES, formatPrice } from "@/data/menu";
 import { menuCategories as menuEN } from "@/data/menu-en";
 import { menuGroupsES, menuGroupsEN } from "@/data/menuGroups";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 
 export default function Menu() {
     const { language } = useLanguage();
@@ -46,15 +46,27 @@ export default function Menu() {
 
             <div className="text-center mb-12 px-6">
 
-                <h2 className="font-display text-6xl md:text-8xl text-espresso leading-none mb-3">
+                <motion.h2 className="font-display text-6xl md:text-8xl text-espresso leading-none mb-3"
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.25 }}>
                     {t.title}
-                </h2>
+                </motion.h2>
 
-                <p className="uppercase text-wood text-xl md:text-4xl mb-6">
+                <motion.p className="uppercase text-wood text-xl md:text-3xl mb-6"
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.25 }}>
                     {t.subtitle}
-                </p>
+                </motion.p>
 
-                <div className="h-px w-60 bg-gold mx-auto" />
+                <motion.div className="h-px w-60 bg-gold mx-auto"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: easeInOut, delay: 0.5 }} />
 
             </div>
 
@@ -154,13 +166,13 @@ export default function Menu() {
                                         </div>
 
                                         {item.description && (
-                                            <p className="text-wood text-sm mt-1.5 leading-relaxed">
+                                            <p className="text-wood text-sm md:text-base mt-1.5 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         )}
 
                                         {item.available && (
-                                            <span className="text-wood text-sm italic mt-1">
+                                            <span className="text-wood text-sm md:text-base italic mt-1">
                                                 {item.available}
                                             </span>
                                         )}
