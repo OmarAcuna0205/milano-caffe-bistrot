@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { dictionaries } from "@/locales/dictionaries";
 import { menuCategories as menuES, formatPrice } from "@/data/menu";
 import { menuCategories as menuEN } from "@/data/menu-en";
-import { menuGroupsES, menuGroupsEN } from "@/data/menuGroups";
+import { menuGroups } from "@/data/menuGroups";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 
 export default function Menu() {
@@ -13,7 +13,7 @@ export default function Menu() {
     const t = dictionaries[language].menu;
 
     const allCategories = language === "ES" ? menuES : menuEN;
-    const groups = language === "ES" ? menuGroupsES : menuGroupsEN;
+    const groups = menuGroups[language];
 
     const [activeGroupId, setActiveGroupId] = useState(groups[0].id);
     const [activeCategoryName, setActiveCategoryName] = useState(
