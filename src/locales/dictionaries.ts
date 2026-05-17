@@ -1,8 +1,25 @@
-export const dictionaries = {
+type NavItem = {
+  label: string;
+  href: string;
+};
+
+type SectionDictionary = {
+  hero: {
+    cta: string;
+  };
+  nav: NavItem[];
+  menu: {
+    title: string;
+    subtitle: string;
+  };
+  featured: {
+    title: string;
+  };
+};
+
+export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
   ES: {
     hero: {
-      title: "Milano",
-      subtitle: "Caffè Bistrot",
       cta: "Ver Menú",
     },
     nav: [
@@ -16,11 +33,12 @@ export const dictionaries = {
       title: "Nuestro Menú",
       subtitle: "Descubre nuestra selección",
     },
+    featured: {
+      title: "Destacados",
+    },
   },
   EN: {
     hero: {
-      title: "Milano",
-      subtitle: "Caffè Bistrot",
       cta: "View Menu",
     },
     nav: [
@@ -33,6 +51,9 @@ export const dictionaries = {
     menu: {
       title: "Our Menu",
       subtitle: "Discover our selection",
+    },
+    featured: {
+      title: "New",
     },
   },
 };
