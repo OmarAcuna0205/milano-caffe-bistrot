@@ -32,7 +32,7 @@ export default function Navbar() {
 
     return (
 
-        <nav className={`fixed flex items-center justify-between w-full px-8 py-4 z-50 duration-300 transition-all ${isScrolled ? "bg-espresso/95" : "bg-transparent"}`} >
+        <nav className={`fixed flex items-center justify-between w-full px-8 py-4 z-50 duration-300 transition-all ${isScrolled ? "bg-wood" : "bg-transparent"}`} >
 
             <a href="#inicio" className="text-gold text-4xl md:text-foreground tracking-wider leading-none md:hover:text-gold duration-300 transition-colors" >
                 MILANO

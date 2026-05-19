@@ -41,7 +41,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       {
         name: "Huevos al Gusto",
-        description: "Dos ingredientes a elegir: Jamón, Tocino, Champiñones, Espinacas, Pimientos dulces. Incluye papas gajo y pan tostado.",
+        description: "Dos ingredientes a elegir: Jamón, Tocino, Champiñones, Espinacas, Pimientos dulces. Incluye papas gajo",
         price: 130,
       },
       {

@@ -42,25 +42,17 @@ export default function Menu() {
     };
 
     return (
-        <section id="menu" className="w-full min-h-screen bg-cream py-20 scroll-mt-17">
+        <section id="menu" className="w-full min-h-screen bg-cream py-15 scroll-mt-17">
 
-            <div className="text-center mb-12 px-6">
+            <div className="text-center mb-10">
 
-                <motion.h2 className="font-display text-6xl md:text-8xl text-espresso leading-none mb-3"
+                <motion.h2 className="font-display text-5xl md:text-8xl text-espresso leading-none"
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.25 }}>
                     {t.title}
                 </motion.h2>
-
-                <motion.p className="uppercase text-wood text-xl md:text-3xl mb-6"
-                    initial={{ opacity: 0, y: -50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, ease: "easeInOut", delay: 0.25 }}>
-                    {t.subtitle}
-                </motion.p>
 
                 <motion.div className="h-px w-60 bg-gold mx-auto"
                     initial={{ opacity: 0, y: 50 }}
