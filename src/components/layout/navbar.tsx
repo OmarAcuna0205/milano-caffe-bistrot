@@ -53,8 +53,10 @@ export default function Navbar() {
                     <button onClick={() => setLanguage("ES")} className={`relative uppercase transition-colors duration-300 ${language === "ES" ? "text-gold" : "text-foreground hover:text-gold"}`}
                     >ES
                         {language === "ES" && (
-                            <motion.span layoutId="active-lang" className="absolute -bottom-0.5 left-0 w-full h-px bg-gold"
-                                transition={{ type: "spring", stiffness: 300, damping: 30 }} />
+                            <motion.span className="absolute -bottom-0.5 left-0 w-full h-px bg-gold origin-left"
+                                initial={{ opacity: 0, scaleX: 0 }}
+                                animate={{ opacity: 1, scaleX: 1 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }} />
                         )}</button>
 
                     <span className="text-foreground text-lg">/</span>
@@ -62,8 +64,10 @@ export default function Navbar() {
                     <button onClick={() => setLanguage("EN")} className={`relative uppercase transition-colors duration-300 ${language === "EN" ? "text-gold" : "text-foreground hover:text-gold"}`}
                     >EN
                         {language === "EN" && (
-                            <motion.span layoutId="active-lang" className="absolute -bottom-0.5 left-0 w-full h-px bg-gold"
-                                transition={{ type: "spring", stiffness: 300, damping: 30 }} />
+                            <motion.span className="absolute -bottom-0.5 left-0 w-full h-px bg-gold origin-left"
+                                initial={{ opacity: 0, scaleX: 0 }}
+                                animate={{ opacity: 1, scaleX: 1 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }} />
                         )}</button>
 
                 </li>
