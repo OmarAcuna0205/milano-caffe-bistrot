@@ -27,7 +27,7 @@ export default function New() {
                     {t.title}
                 </motion.h2>
 
-                <motion.div className="h-px w-60 bg-gold mx-auto"
+                <motion.div className="h-px w-40 bg-gold mx-auto"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

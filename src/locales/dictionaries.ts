@@ -10,7 +10,6 @@ type SectionDictionary = {
   nav: NavItem[];
   menu: {
     title: string;
-    subtitle: string;
   };
   featured: {
     title: string;
@@ -30,8 +29,7 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
       { label: "Contacto", href: "#contacto" },
     ],
     menu: {
-      title: "Nuestro Menú",
-      subtitle: "Descubre nuestra selección",
+      title: "Menú",
     },
     featured: {
       title: "Destacados",
@@ -49,8 +47,7 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
       { label: "Contact", href: "#contacto" },
     ],
     menu: {
-      title: "Our Menu",
-      subtitle: "Discover our selection",
+      title: "Menu",
     },
     featured: {
       title: "New",
