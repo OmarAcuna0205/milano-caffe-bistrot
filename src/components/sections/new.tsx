@@ -15,7 +15,7 @@ export default function New() {
     const [activeCard, setActiveCard] = useState(0);
 
     return (
-        <div id="novedades" className="w-full min-h-screen py-10 scroll-mt-17">
+        <div id="destacados" className="w-full min-h-screen py-10 scroll-mt-17">
 
             <div className="text-center mb-5">
 

@@ -24,7 +24,7 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
     nav: [
       { label: "Inicio", href: "#inicio" },
       { label: "Menú", href: "#menu" },
-      { label: "Novedades", href: "#novedades" },
+      { label: "Destacados", href: "#destacados" },
       { label: "Sobre Nosotros", href: "#sobre-nosotros" },
       { label: "Contacto", href: "#contacto" },
     ],
@@ -42,7 +42,7 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
     nav: [
       { label: "Home", href: "#inicio" },
       { label: "Menu", href: "#menu" },
-      { label: "News", href: "#novedades" },
+      { label: "Featured", href: "#destacados" },
       { label: "About Us", href: "#sobre-nosotros" },
       { label: "Contact", href: "#contacto" },
     ],
@@ -50,7 +50,7 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
       title: "Menu",
     },
     featured: {
-      title: "New",
+      title: "Featured",
     },
   },
 };
