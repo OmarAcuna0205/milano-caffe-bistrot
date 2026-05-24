@@ -30,6 +30,27 @@ export const featuredItems: Record<"ES" | "EN", FeaturedItem[]> = {
             price: 10,
             image: "/images/postre.png",
         },
+        {
+            id: "4",
+            name: "croissant",
+            description: "delicioso croissant",
+            price: 12,
+            image: "/images/croissant.png",
+        },
+        {
+            id: "5",
+            name: "desayuno",
+            description: "rico desayuno",
+            price: 18,
+            image: "/images/desayuno.png",
+        },
+        {
+            id: "6",
+            name: "nieve",
+            description: "rica nieve",
+            price: 9,
+            image: "/images/nieve.png",
+        },
     ],
     EN: [
         {
@@ -52,6 +73,27 @@ export const featuredItems: Record<"ES" | "EN", FeaturedItem[]> = {
             description: "delicious dessert",
             price: 10,
             image: "/images/postre.png",
+        },
+        {
+            id: "4",
+            name: "croissant",
+            description: "delicious croissant",
+            price: 12,
+            image: "/images/croissant.png",
+        },
+        {
+            id: "5",
+            name: "breakfast",
+            description: "delicious breakfast",
+            price: 18,
+            image: "/images/desayuno.png",
+        },
+        {
+            id: "6",
+            name: "ice cream",
+            description: "delicious ice cream",
+            price: 9,
+            image: "/images/nieve.png",
         },
     ],
 };
