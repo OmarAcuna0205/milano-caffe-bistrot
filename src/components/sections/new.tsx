@@ -13,6 +13,8 @@ export default function New() {
     const t = dictionaries[language].featured
     const items = featuredItems[language]
     const [activeCard, setActiveCard] = useState(0);
+    const ordered = items.map((item, i) => items[(activeCard + i) % items.length])
+
 
     return (
         <div id="destacados" className="w-full min-h-screen py-10 scroll-mt-17">
@@ -37,21 +39,22 @@ export default function New() {
 
             <div className="flex items-center justify-between">
 
-                <button className="px-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleLeftIcon size={40} color="gold" /></button>
+                <button onClick={() => setActiveCard((activeCard - 1 + 6) % 6)} className="px-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleLeftIcon size={40} color="gold" /></button>
 
                 <div className="overflow-hidden">
                     <div className="flex items-center justify-between overflow-hidden">
-                        {items.map(item => (
+                        {ordered.map(item => (
                             <motion.div className="w-100 h-100 py-5 px-5" key={item.id}
+                                layout
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.5 }}>
-                                <img src={item.image} alt={item.name} className="w-full object-cover h-full rounded-2xl" />
+                                <img src={item.image} alt={item.name} draggable={false} className="w-full object-cover h-full rounded-2xl pointer-events-none" />
                             </motion.div>
                         ))}
                     </div>
                 </div>
 
-                <button className="px-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleRightIcon size={40} color="gold" /></button>
+                <button onClick={() => setActiveCard((activeCard + 1) % 6)} className="px-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleRightIcon size={40} color="gold" /></button>
 
             </div>
 
