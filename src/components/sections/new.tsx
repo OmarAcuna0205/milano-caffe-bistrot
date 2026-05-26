@@ -17,7 +17,7 @@ export default function New() {
 
 
     return (
-        <div id="destacados" className="w-full min-h-screen py-10 scroll-mt-17">
+        <div id="destacados" className="w-full py-10 scroll-mt-17">
 
             <div className="text-center mb-5">
 
@@ -43,11 +43,14 @@ export default function New() {
 
                 <div className="overflow-hidden">
                     <div className="flex items-center justify-between overflow-hidden">
-                        {ordered.map(item => (
-                            <motion.div className="w-100 h-100 py-5 px-5" key={item.id}
+                        {ordered.slice(0, 3).map((item, i) => (
+                            <motion.div className={`w-100 h-100 py-5 px-5 ${i === 0 ? "" : "hidden md:block"}`} key={item.id}
                                 layout
                                 whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.5 }}>
+                                transition={{
+                                    layout: { duration: 0.75, ease: easeInOut },
+                                    default: { duration: 0.5, delay: 0.25, ease: easeInOut }
+                                }}>
                                 <img src={item.image} alt={item.name} draggable={false} className="w-full object-cover h-full rounded-2xl pointer-events-none" />
                             </motion.div>
                         ))}
