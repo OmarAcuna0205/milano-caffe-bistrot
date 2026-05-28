@@ -17,11 +17,11 @@ export default function New() {
 
 
     return (
-        <div id="destacados" className="w-full py-10 scroll-mt-17">
+        <div id="destacados" className="w-full py-10 scroll-mt-17 bg-cream">
 
             <div className="text-center mb-5">
 
-                <motion.h2 className="font-display text-5xl md:text-8xl text-cream leading-none"
+                <motion.h2 className="font-display text-5xl md:text-8xl text-espresso leading-none"
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -39,25 +39,27 @@ export default function New() {
 
             <div className="flex items-center justify-between">
 
-                <button onClick={() => setActiveCard((activeCard - 1 + 6) % 6)} className="px-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleLeftIcon size={40} color="gold" /></button>
-
                 <div className="overflow-hidden">
-                    <div className="flex items-center justify-between overflow-hidden">
+                    <div className="flex items-center justify-between overflow-hidden gap-4">
+
+                        <button onClick={() => setActiveCard((activeCard - 1 + 6) % 6)} className="ml-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleLeftIcon size={50} color="espresso" /></button>
+
                         {ordered.slice(0, 3).map((item, i) => (
-                            <motion.div className={`w-100 h-100 py-5 px-5 ${i === 0 ? "" : "hidden md:block"}`} key={item.id}
+                            <motion.div className={`w-100 h-100 py-4 ${i === 0 ? "" : "hidden md:block"}`} key={item.id}
                                 layout
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{ scale: 1.03 }}
                                 transition={{
                                     layout: { duration: 0.75, ease: easeInOut },
                                     default: { duration: 0.5, delay: 0.25, ease: easeInOut }
                                 }}>
-                                <img src={item.image} alt={item.name} draggable={false} className="w-full object-cover h-full rounded-2xl pointer-events-none" />
+                                <img src={item.image} alt={item.name} draggable={false} className="w-full object-cover h-full rounded-2xl pointer-events-none border-4 border-gold" />
                             </motion.div>
                         ))}
+
+                        <button onClick={() => setActiveCard((activeCard + 1) % 6)} className="mr-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleRightIcon size={50} color="espresso" /></button>
+
                     </div>
                 </div>
-
-                <button onClick={() => setActiveCard((activeCard + 1) % 6)} className="px-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleRightIcon size={40} color="gold" /></button>
 
             </div>
 
