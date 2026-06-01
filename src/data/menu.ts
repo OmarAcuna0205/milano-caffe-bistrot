@@ -56,7 +56,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         name: "Omelette La Scala",
-        description: "Omelette con pimientos dulces, cherry, calabaza y cebollín.",
+        description: "Omelette con pimientos dulces, cherry, calabaza, pepino y cebollín.",
         price: 250,
       },
       {

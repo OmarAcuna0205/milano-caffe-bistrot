@@ -41,7 +41,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       {
         name: "Eggs Your Way",
-        description: "Choice of two ingredients: Ham, Bacon, Mushrooms, Spinach, Sweet bell peppers. Includes potato wedges and toast.",
+        description: "Choice of two ingredients: Ham, Bacon, Mushrooms, Spinach, Peppers. Includes potato wedges and toast.",
         price: 130,
       },
       {

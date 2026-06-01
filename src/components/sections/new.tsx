@@ -40,7 +40,7 @@ export default function New() {
             <div className="flex items-center justify-between">
 
                 <div className="overflow-hidden">
-                    <div className="flex items-center justify-between overflow-hidden gap-2 md:gap-4">
+                    <div key={language} className="flex items-center justify-between overflow-hidden gap-2 md:gap-4">
 
                         <button onClick={() => setActiveCard((activeCard - 1 + 6) % 6)} className="ml-2 md:ml-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleLeftIcon size={50} color="espresso" /></button>
 
