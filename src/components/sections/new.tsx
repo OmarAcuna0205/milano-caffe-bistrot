@@ -5,7 +5,7 @@ import { easeInOut, motion } from "framer-motion"
 import { useLanguage } from "@/context/LanguageContext"
 import { dictionaries } from "@/locales/dictionaries"
 import { featuredItems } from "@/data/featured"
-import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from "@phosphor-icons/react";
+import { CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
 
 export default function New() {
 
@@ -42,7 +42,7 @@ export default function New() {
                 <div className="overflow-hidden">
                     <div key={language} className="flex items-center justify-between overflow-hidden gap-2 md:gap-4">
 
-                        <button onClick={() => setActiveCard((activeCard - 1 + items.length) % items.length)} className="ml-2 md:ml-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleLeftIcon size={50} color="espresso" /></button>
+                        <button onClick={() => setActiveCard((activeCard - 1 + items.length) % items.length)} className="ml-2 md:ml-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><CaretLeftIcon size={50} color="espresso" /></button>
 
                         {ordered.slice(0, 3).map((item, i) => (
                             <motion.div className={`w-100 h-100 py-4 ${i === 0 ? "" : "hidden md:block"}`} key={item.id}
@@ -56,7 +56,7 @@ export default function New() {
                             </motion.div>
                         ))}
 
-                        <button onClick={() => setActiveCard((activeCard + 1) % items.length)} className="mr-2 md:mr-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><ArrowCircleRightIcon size={50} color="espresso" /></button>
+                        <button onClick={() => setActiveCard((activeCard + 1) % items.length)} className="mr-2 md:mr-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><CaretRightIcon size={50} color="espresso" /></button>
 
                     </div>
                 </div>
