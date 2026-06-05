@@ -15,7 +15,6 @@ export default function New() {
     const [activeCard, setActiveCard] = useState(0);
     const ordered = items.map((item, i) => items[(activeCard + i) % items.length])
 
-
     return (
         <div id="destacados" className="w-full py-10 scroll-mt-17 bg-cream">
 
@@ -45,14 +44,20 @@ export default function New() {
                         <button onClick={() => setActiveCard((activeCard - 1 + items.length) % items.length)} className="ml-2 md:ml-4 hover:-translate-y-0.5 duration-200 cursor-pointer"><CaretLeftIcon size={50} color="espresso" /></button>
 
                         {ordered.slice(0, 3).map((item, i) => (
-                            <motion.div className={`w-100 h-100 py-4 ${i === 0 ? "" : "hidden md:block"}`} key={item.id}
+                            <motion.div className={`flex flex-col w-100 py-4 ${i === 0 ? "" : "hidden md:flex"}`} key={item.id}
                                 layout
                                 whileHover={{ scale: 1.03 }}
                                 transition={{
                                     layout: { duration: 0.75, ease: easeInOut },
                                     default: { duration: 0.5, delay: 0.25, ease: easeInOut }
                                 }}>
-                                <img src={item.image} alt={item.name} draggable={false} className="w-full object-cover h-full rounded-2xl pointer-events-none border-4 border-gold" />
+                                <img src={item.image} alt={item.name} draggable={false} className="w-full h-80 object-cover rounded-2xl pointer-events-none border-4 border-gold" />
+                                <motion.h2 key={item.id} className="text-espresso text-center text-3xl mt-2"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.75, ease: easeInOut }}>
+                                    {item.name}
+                                </motion.h2>
                             </motion.div>
                         ))}
 
