@@ -16,7 +16,7 @@ export default function Hero() {
 
             <Image src="/images/hero.jpg" alt="Galeria vittorio emanuele II" fill priority className="object-cover object-center" />
 
-            <div className="absolute inset-0 bg-linear-to-b from-espresso/50 via-espresso/25 to-espresso/50" />
+            <div className="absolute inset-0 bg-linear-to-b from-espresso/45 via-espresso/20 to-espresso/45" />
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
 
