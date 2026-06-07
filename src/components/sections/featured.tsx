@@ -7,7 +7,7 @@ import { dictionaries } from "@/locales/dictionaries"
 import { featuredItems } from "@/data/featured"
 import { CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
 
-export default function New() {
+export default function Featured() {
 
     const { language } = useLanguage()
     const t = dictionaries[language].featured
