@@ -6,7 +6,7 @@ import { dictionaries } from "@/locales/dictionaries";
 import { menuCategories as menuES, formatPrice } from "@/data/menu";
 import { menuCategories as menuEN } from "@/data/menu-en";
 import { menuGroups } from "@/data/menuGroups";
-import { motion, AnimatePresence, easeInOut } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Menu() {
     const { language } = useLanguage();
