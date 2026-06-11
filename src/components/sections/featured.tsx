@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { easeInOut, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { useLanguage } from "@/context/LanguageContext"
 import { dictionaries } from "@/locales/dictionaries"
 import { featuredItems } from "@/data/featured"
@@ -48,14 +48,14 @@ export default function Featured() {
                                 layout
                                 whileHover={{ scale: 1.03 }}
                                 transition={{
-                                    layout: { duration: 0.75, ease: easeInOut },
-                                    default: { duration: 0.5, delay: 0.25, ease: easeInOut }
+                                    layout: { duration: 0.75, ease: "easeInOut" },
+                                    default: { duration: 0.5, delay: 0.25, ease: "easeInOut" }
                                 }}>
                                 <img src={item.image} alt={item.name} draggable={false} className="w-full h-80 object-cover rounded-2xl pointer-events-none border-4 border-gold" />
                                 <motion.h2 key={item.id} className="text-espresso text-center text-3xl mt-2"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.75, ease: easeInOut }}>
+                                    transition={{ duration: 0.75, ease: "easeInOut" }}>
                                     {item.name}
                                 </motion.h2>
                             </motion.div>
