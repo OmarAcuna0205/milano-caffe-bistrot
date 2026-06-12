@@ -3,6 +3,11 @@ type NavItem = {
   href: string;
 };
 
+type TextSegment = {
+  text: string;
+  highlight: boolean;
+};
+
 type SectionDictionary = {
   hero: {
     cta: string;
@@ -13,6 +18,10 @@ type SectionDictionary = {
   };
   featured: {
     title: string;
+  };
+  about: {
+    title: string;
+    description: TextSegment[];
   };
 };
 
@@ -34,6 +43,20 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
     featured: {
       title: "Destacados",
     },
+    about: {
+      title: "Sobre Nosotros",
+      description: [
+        { text: "En ", highlight: false },
+        { text: " Milano Caffè Bistrot", highlight: true },
+        { text: " llevamos el alma de", highlight: false },
+        { text: " Italia", highlight: true },
+        { text: " a Chihuahua. Cada platillo, cada caffè y cada detalle está pensado para ofrecerte una", highlight: false },
+        { text: " experiencia auténtica", highlight: true },
+        { text: ", en un ambiente cálido y acogedor en el corazón de", highlight: false },
+        { text: " Paseo Central", highlight: true },
+        { text: ".", highlight: false },
+      ],
+    }
   },
   EN: {
     hero: {
@@ -52,5 +75,19 @@ export const dictionaries: Record<"ES" | "EN", SectionDictionary> = {
     featured: {
       title: "Featured",
     },
+    about: {
+      title: "About Us",
+      description: [
+        { text: "At", highlight: false },
+        { text: " Milano Caffè Bistrot", highlight: true },
+        { text: " we bring the soulf of", highlight: false },
+        { text: " Italy", highlight: true },
+        { text: " to Chihuahua. Every dish, every caffè, and every detail is crafted to offer you an", highlight: false },
+        { text: " authentic experience", highlight: true },
+        { text: ", in a warm and welcoming atmosphere in the heart of", highlight: false },
+        { text: " Paseo Central", highlight: true },
+        { text: ".", highlight: false },
+      ],
+    }
   },
 };
